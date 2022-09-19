@@ -31,14 +31,16 @@ In the fourth step, I added the kubectl to my local system path so when I run *k
 You can do that by following the prompt on the screen while installing the kubectl cli in step 3 above. Usually, the path to add will look similar to
 this *C:\Users\username.azure-kubectl* and then, run *$env:path += 'C:\Users\imoh_\.azure-kubelogin'* in the PowerShell or Git Bash Terminal.
  
-<img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Install%20Cli.png">
+<img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Add%20path.png">
 
 In the fifth step, I configured *kubectl* to connect to your Kubernetes cluster using the *az aks get-credentials* command as shown below:
-*az aks get-credentials --resource-group myResourceGroup --name myAKSCluster*
+*az aks get-credentials --resource-group myResourceGroup --name myAKSCluster*. 
 
 If you run the *kubectl config get-contexts* command, you will be able to see the node in which your cluster is running on. 
 Also, you can run *kubectl get nodes* to returns a list of the cluster nodes.
-  
+
+<img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/kubectl%20get%20nodes.png">
+
 Now using the vim editor, I created the yaml file called *azure-vote.yaml* and added the Yaml File content as defined in 
 the Microsoft Official docs. See the <a href="https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-cli" target="_blank">Microsoft Official Docs</a>
   
