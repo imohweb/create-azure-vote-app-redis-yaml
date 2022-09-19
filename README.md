@@ -1,4 +1,4 @@
-# create-azure-vote-app-redis-yaml
+# Deploy an Azure Kubernetes Service cluster using the Azure CLI
 Azure Kubernetes Service (AKS) is a managed Kubernetes service that lets you quickly deploy and manage clusters. In this lab, you will:
 
 Deploy an AKS cluster using the Azure CLI.<br>
