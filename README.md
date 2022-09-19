@@ -6,7 +6,7 @@ Run a sample multi-container application with a web front-end and a Redis instan
   
   Once the app is deployed the UI of the app will look exactly as the one below:
   
-  <img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Azure%20Voting%20App%20.png">
+  <align="center"><img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Azure%20Voting%20App%20.png"></align>
 
 # The Azure CLI Commands Used in this Lab
 Firstly, I created a Resource Group that will house the AKS Cluster. A Resource Group on Azure is the logical folder that holds your resources in one place
@@ -17,19 +17,21 @@ The commands to create the resource are: *az group create --name myResourceGroup
 Secondly, I created Azure AKS cluster using: 
 *az aks create -g rg1 -n imohcluster  --enable-managed-identity --node-count 1 --enable-addons monitoring --enable-msi-auth-for-monitoring  --generate-ssh-keys*
    
-  <img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Create%20aks%20cluster.png">
+  <align="center"><img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Create%20aks%20cluster.png"></align>
 
 In the az aks create command above, I added *--enable-addons monitoring* and *--enable-msi-auth-for-monitoring* parameter 
 to enable Azure Monitor Container insights with managed identity authentication (preview).
   
 
 Thirdly, Install the kubectl command on my local PC by running *az aks install-cli* command. Installing the kubectl cli enables connection to the AKS Cluster on Azure.
-   <img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Install%20Cli.png">
+ 
+   <align="center"><img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Install%20Cli.png"></align>
 
 In the fourth step, I added the kubectl to my local system path so when I run *kubectl.exe* the system will recognize it. 
 You can do that by following the prompt on the screen while installing the kubectl cli in step 3 above. Usually, the path to add will look similar to
 this *C:\Users\username.azure-kubectl* and then, run *$env:path += 'C:\Users\imoh_\.azure-kubelogin'* in the PowerShell or Git Bash Terminal.
-  <img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Install%20Cli.png">
+ 
+ <align="center"><img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Install%20Cli.png"></align>
 
 In the fifth step, I configured *kubectl* to connect to your Kubernetes cluster using the *az aks get-credentials* command as shown below:
 *az aks get-credentials --resource-group myResourceGroup --name myAKSCluster*
@@ -40,17 +42,17 @@ Also, you can run *kubectl get nodes* to returns a list of the cluster nodes.
 Now using the vim editor, I created the yaml file called *azure-vote.yaml* and added the Yaml File content as defined in 
 the Microsoft Official docs. See the <a href="https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-cli" target="_blank">Microsoft Official Docs</a>
   
-   <img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Yaml%20File.png">
+ <align="center"><img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Yaml%20File.png"></align>
 
 # Deploy the Application 
 Here, after defining the Yaml file run the *kubectl apply -f azure-vote.yaml* to deploy the application. Note: This can take a little while to deploy depending on your internet speed.
 If it's throws *connection timed out error* keep trying it. 
 
 Your output should look like this:
-   <img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Kubectl%20apply%20the%20Yaml%20file.png">
+   <align="center"><img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Kubectl%20apply%20the%20Yaml%20file.png"></align>
   
  Run *kubectl get pods* to see the list of running pods in your cluster. 
-  <img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/kubectl%20get%20nodes.png">
+  <align="center"><img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/kubectl%20get%20nodes.png"></align>
 
 # Delete the cluster
 To avoid Azure charges, if you don't plan on keeping the Voting App, clean up your unnecessary resources. 
