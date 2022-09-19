@@ -6,7 +6,7 @@ Run a sample multi-container application with a web front-end and a Redis instan
   
   Once the app is deployed the UI of the app will look exactly as the one below:
   
-  <img src ="https://github.com/imohweb/create-azure-vote-app-redis-yaml/blob/master/images/Azure%20Voting%20App.png">
+  <img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Azure%20Voting%20App%20.png">
 
 # The Azure CLI Commands Used in this Lab
 Firstly, I created a Resource Group that will house the AKS Cluster. A Resource Group on Azure is the logical folder that holds your resources in one place
