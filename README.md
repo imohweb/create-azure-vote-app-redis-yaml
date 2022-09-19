@@ -13,7 +13,7 @@ The commands to create the resource are: *az group create --name myResourceGroup
 Secondly, I created Azure AKS cluster using: 
 *az aks create -g rg1 -n imohcluster  --enable-managed-identity --node-count 1 --enable-addons monitoring --enable-msi-auth-for-monitoring  --generate-ssh-keys*
    
- <img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Create%20aks%20cluster.png">
+ <img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Create%20%20AKS%20Cluster.png">
 
 In the az aks create command above, I added *--enable-addons monitoring* and *--enable-msi-auth-for-monitoring* parameter 
 to enable Azure Monitor Container insights with managed identity authentication (preview).
