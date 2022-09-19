@@ -33,7 +33,7 @@ If you run the *kubectl config get-contexts* command, you will be able to see th
 Also, you can run *kubectl get nodes* to returns a list of the cluster nodes.
 
 Now using the vim editor, I created the yaml file called *azure-vote.yaml* and added the Yaml File content as defined in 
-the Microsoft Official docs. See the <a href="https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-cli">Microsoft Official Docs</a>
+the Microsoft Official docs. See the <a href="https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-cli" target="_blank">Microsoft Official Docs</a>
 
 # Deploy the APplication 
 Here, after defining the Yaml file run the *kubectl apply -f azure-vote.yaml* to deploy the application. Note: This can take a little while to deploy depending on your internet speed.
