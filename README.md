@@ -52,7 +52,7 @@ Your output should look like the screenshot below:
   <img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Kubectl%20apply%20the%20Yaml%20file.png">
   
  Run *kubectl get pods* to see the list of running pods in your cluster. <br>
- <img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/kubectl%20get%20nodes.png">
+ <img src ="https://github.com/imohweb/deploy-azure-voting-app-using-redis-yaml/blob/master/images/Kubectl%20get%20pods.png">
 
 # Delete the cluster
 To avoid Azure charges, if you don't plan on keeping the Voting App, clean up your unnecessary resources. 
